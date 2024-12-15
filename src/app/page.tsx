@@ -1,4 +1,3 @@
-import { ModeToggle } from "@/components/modeToggler";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import mainImage from "@/images/mainImage2.png"
