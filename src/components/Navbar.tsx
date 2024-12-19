@@ -8,8 +8,9 @@ const Navbar = () => {
     <div className='px-12 py-8 flex justify-between items-center'>
       <Image src={logo} alt='logo' className='dark:hidden w-28' />
       <Image src={logoDark} alt='logoDark' className='hidden w-28 dark:flex' />
+      {/* click Here */}
       <ModeToggle />
-      
+
     </div>
   )
 }
