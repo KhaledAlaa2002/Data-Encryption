@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Copy } from "lucide-react";
-import CryptoJS from "crypto-js";
+import CryptoJS from "crypto-js"; // edited
 import ImageEncryptor from "@/components/ImageEncryption";
 import ImageDecryptor from "@/components/ImageDecryption";
 
