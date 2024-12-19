@@ -5,7 +5,6 @@ import Image from "next/image";
 import mainImage from "@/images/mainImage2.png";
 import logo from "@/images/logo.png";
 import logoDark from "@/images/logoDark.png";
-import security from "@/images/security-safe.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -30,7 +29,6 @@ export default function Home() {
   const [decryptionKey, setDecryptionKey] = useState<string>(""); // Decryption key
   const [shift, setShift] = useState<number>(3); // For Caesar Cipher
   const [inputText, setInputText] = useState<string>("");
-  const [fileContent, setFileContent] = useState<string | null>(null);
   const [result, setResult] = useState<string>("");
   const [showDecriptionResult, setshowDecriptionResult] = useState(false);
 
@@ -90,16 +88,6 @@ export default function Home() {
     setResult(decrypted);
   };
 
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setFileContent(reader.result as string);
-      };
-      reader.readAsText(file);
-    }
-  };
 
   const caesarCipherEncrypt = (text: string, shift: number): string => {
     return text

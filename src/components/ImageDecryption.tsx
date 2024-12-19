@@ -45,6 +45,7 @@ const ImageDecryptor: React.FC = () => {
       const base64Image = `data:image/png;base64,${decrypted.toString("base64")}`;
       setDecryptedImage(base64Image);
     } catch (error) {
+      console.log(error)
       alert("Decryption failed! Please ensure the key is correct and matches the encryption key.");
     }
   };
