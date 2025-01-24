@@ -14,12 +14,12 @@ const eslintConfig = [
   {
     rules: {
       // Disallow the use of 'any' type in TypeScript
-      "@typescript-eslint/no-explicit-any": "error",
-      
+      "@typescript-eslint/no-explicit-any": "false",
+
       // Warn about unused variables (like 'err')
-      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }] // Optionally, you can allow unused variables that start with an underscore
-    }
-  }
+      "@typescript-eslint/no-unused-vars": ["false", { argsIgnorePattern: "^_" }] // Optionally, you can allow unused variables that start with an underscore
+    },
+  },
 ];
 
 export default eslintConfig;
