@@ -22,6 +22,7 @@ import { Copy } from "lucide-react";
 import CryptoJS from "crypto-js"; // edited
 import ImageEncryptor from "@/components/ImageEncryption";
 import ImageDecryptor from "@/components/ImageDecryption";
+import UrlChecker from "@/components/UrlChecker";
 
 export default function Home() {
   const [encryptionMethod, setEncryptionMethod] = useState<string>("AES");
@@ -133,6 +134,7 @@ export default function Home() {
           <TabsList>
             <TabsTrigger value="Encryption">Encryption</TabsTrigger>
             <TabsTrigger value="Decryption">Decryption</TabsTrigger>
+            <TabsTrigger value="URL Checker">URl Checker</TabsTrigger>
           </TabsList>
           {/* Encryption Tab */}
           <TabsContent value="Encryption" className="flex items-center flex-col gap-10 justify-center w-[500px] pb-20">
@@ -273,6 +275,12 @@ export default function Home() {
                 <ImageDecryptor />
               </TabsContent>
             </Tabs>
+          </TabsContent>
+
+
+          {/* URL Checker Tab */}
+          <TabsContent value="URL Checker" className="flex items-center flex-col gap-10 justify-center pb-20">
+            <UrlChecker/>
           </TabsContent>
         </Tabs>
       </div>
